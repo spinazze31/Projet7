@@ -1,0 +1,26 @@
+.banner_container {
+  display: flex;
+  width: 1240px;
+  height: 223px;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  margin-top: 50px;
+  position: relative;
+
+  .banner_img {
+    object-fit: cover;
+    border-radius: 25px;
+    width: 100%;
+    filter: brightness(60%);
+  }
+  .banner_txt {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    z-index: 1;
+    color: white;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 700;
+  }
+}

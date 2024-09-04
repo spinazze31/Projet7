@@ -1,0 +1,17 @@
+:root {
+  font-family: Montserrat;
+}
+
+a {
+  font-weight: 500;
+  color: black;
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  max-width: 1440px;
+  min-width: 320px;
+  min-height: 100vh;
+}
