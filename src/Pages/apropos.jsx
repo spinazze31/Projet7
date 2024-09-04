@@ -1,7 +1,9 @@
+import BannerApropos from "../Components/banner_apropos";
+
 function Apropos() {
   return (
     <>
-      <h1>Bienvenue</h1>;
+      <BannerApropos />;
     </>
   );
 }
