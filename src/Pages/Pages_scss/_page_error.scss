@@ -1,0 +1,31 @@
+.error_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 900px;
+  .error_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 597px;
+    height: 263px;
+    font-size: 288px;
+    font-weight: 700;
+    color: #ff6060;
+    margin: 100px 0;
+  }
+  .error_txt {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
+    color: #ff6060;
+    margin-bottom: 100px;
+  }
+  .error_link {
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: solid 1px black;
+  }
+}

@@ -1,4 +1,5 @@
 import ImageFontApropos from "../Images/image_font_apropos.jpg";
+import "../Main_scss/main.css";
 
 function BannerApropos() {
   return (

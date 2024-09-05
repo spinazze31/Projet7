@@ -1,9 +1,11 @@
-import Banner from "../Components/banner_home";
+import Banner from "../Layout/banner_home";
+import Cards from "../Components/cards";
 
 function Accueil() {
   return (
     <>
       <Banner />
+      <Cards />
     </>
   );
 }

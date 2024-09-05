@@ -5,7 +5,8 @@ import "../src/Main_scss/main.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Accueil from "./Pages/home.jsx";
 import Apropos from "./Pages/apropos.jsx";
-import Header from "./Components/header.jsx";
+import Header from "./Layout/header.jsx";
+import ErrorPage from "./Pages/errorpage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/apropos" element={<Apropos />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
     <App />

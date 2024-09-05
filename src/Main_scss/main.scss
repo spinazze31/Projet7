@@ -1,4 +1,6 @@
 @import "../Base_scss/base";
 @import "../Utils_scss/variables";
-@import "../Components/Components_scss/header";
-@import "../Components/Components_scss/banner";
+@import "../Layout/Layout_scss/banner";
+@import "../Layout/Layout_scss/header";
+@import "../Components/Components_scss/cards";
+@import "../Pages/Pages_scss/page_error";

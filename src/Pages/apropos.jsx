@@ -1,4 +1,4 @@
-import BannerApropos from "../Components/banner_apropos";
+import BannerApropos from "../Layout/banner_apropos";
 
 function Apropos() {
   return (
