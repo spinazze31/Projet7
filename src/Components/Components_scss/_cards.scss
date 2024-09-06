@@ -1,7 +1,25 @@
 .cards_container {
   width: 1240px;
-  height: 829px;
+  height: 2900px;
   border-radius: 25px;
   background: #f6f6f6;
-  margin-top: 40px;
+  margin: 40px 0px 0px 50px;
+  .card_image_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+    .card_image {
+      display: flex;
+      width: 340px;
+      height: 340px;
+      border: solid 1px black;
+      margin-top: 50px;
+    }
+    .card_title {
+      position: absolute;
+      z-index: 2;
+    }
+  }
 }

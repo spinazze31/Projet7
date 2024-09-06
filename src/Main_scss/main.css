@@ -11,10 +11,14 @@ a {
 body {
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
+}
+
+#root {
   width: 100%;
   max-width: 1440px;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .banner_container {
@@ -23,7 +27,7 @@ body {
   height: 223px;
   border: 1px solid #000000;
   border-radius: 25px;
-  margin-top: 50px;
+  margin: 50px 0px 0px 50px;
   position: relative;
 }
 .banner_container .banner_img {
@@ -49,6 +53,8 @@ body {
   justify-content: space-between;
   width: 1240px;
   height: 68px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 .header-container .logo {
   display: flex;
@@ -68,10 +74,28 @@ body {
 
 .cards_container {
   width: 1240px;
-  height: 829px;
+  height: 2900px;
   border-radius: 25px;
   background: #f6f6f6;
-  margin-top: 40px;
+  margin: 40px 0px 0px 50px;
+}
+.cards_container .card_image_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+}
+.cards_container .card_image_container .card_image {
+  display: flex;
+  width: 340px;
+  height: 340px;
+  border: solid 1px black;
+  margin-top: 50px;
+}
+.cards_container .card_image_container .card_title {
+  position: absolute;
+  z-index: 2;
 }
 
 .error_container {
@@ -93,7 +117,6 @@ body {
 }
 .error_container .error_txt {
   display: flex;
-  justify-content: center;
   font-size: 36px;
   font-weight: 500;
   line-height: 51.34px;
@@ -104,4 +127,25 @@ body {
   font-size: 18px;
   font-weight: 500;
   border-bottom: solid 1px black;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1340px;
+  max-width: 1440px;
+  height: 209px;
+  background: #000000;
+}
+.footer_container .footer_logo {
+  margin-top: 50px;
+}
+.footer_container .footer_txt {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34.22px;
+  text-align: center;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 import Banner from "../Layout/banner_home";
 import Cards from "../Components/cards";
 
-function Accueil() {
+function Home() {
   return (
     <>
       <Banner />
@@ -10,4 +10,4 @@ function Accueil() {
   );
 }
 
-export default Accueil;
+export default Home;
