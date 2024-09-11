@@ -1,4 +1,4 @@
-:root {
+* {
   font-family: Montserrat;
 }
 
@@ -8,15 +8,22 @@ a {
   text-decoration: inherit;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  margin: 0;
+.main_container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#root {
-  width: 100%;
-  max-width: 1440px;
-  padding: 0 50px;
-  box-sizing: border-box;
+@media (max-width: 1024px) {
+  .main_container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main_container {
+    max-width: 767.98px;
+    padding: 0;
+  }
 }

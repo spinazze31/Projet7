@@ -1,7 +1,7 @@
 import ImageFontApropos from "../Images/image_font_apropos.jpg";
 import "../Main_scss/main.css";
 
-function BannerApropos() {
+function BannerAbout() {
   return (
     <>
       <div className="banner_container">
@@ -15,4 +15,4 @@ function BannerApropos() {
   );
 }
 
-export default BannerApropos;
+export default BannerAbout;

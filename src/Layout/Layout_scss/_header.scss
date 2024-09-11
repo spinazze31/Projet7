@@ -1,24 +1,40 @@
-.header-container {
+.header_container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  width: 1240px;
-  height: 68px;
-  margin-left: 50px;
+  width: calc(100% - 200px);
   margin-top: 20px;
+  height: 68px;
+  margin-left: 100px;
   .logo {
     display: flex;
     width: 210.32px;
   }
-  .header-link {
+  .header_link {
     display: flex;
     align-items: center;
-
     font-size: 24px;
     font-weight: 500;
-    line-height: 34.22px;
     gap: 57px;
   }
-  .header-line {
+  .header_line {
     border-bottom: solid black 1px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header_container {
+    margin-left: 10px;
+    width: calc(100% - 20px);
+
+    .logo {
+      width: 145px;
+      height: 46.88px;
+    }
+    .header_link {
+      font-size: 12px;
+      gap: 26px;
+      padding-right: 10px;
+    }
   }
 }
