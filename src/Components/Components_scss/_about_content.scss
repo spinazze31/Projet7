@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     width: calc(100% - 417px);
     height: 52px;
     border-radius: 5px;
@@ -16,6 +17,16 @@
       font-size: 24px;
       font-weight: 700;
       padding-left: 10px;
+    }
+    .chevron_down {
+      font-size: 25px;
+      padding-right: 10px;
+      cursor: pointer;
+    }
+    .chevron_up {
+      font-size: 25px;
+      padding-right: 10px;
+      cursor: pointer;
     }
   }
   .about_text {

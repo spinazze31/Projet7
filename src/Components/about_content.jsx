@@ -1,6 +1,5 @@
+import { useState } from "react";
 import "../Main_scss/main.css";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { faChevronUp } from "@awesome.me/kit-KIT_CODE/icons/classic/regular"; <FontAwesomeIcon icon={faChevronUp} />
 
 function AboutContent(props) {
   return (
@@ -8,6 +7,7 @@ function AboutContent(props) {
       <div className="about_container">
         <div className="about_container-title">
           <h2 className="about_title">{props.title}</h2>
+          <i class="fa-solid chevron_down">&#xf078;</i>
         </div>
         <p className="about_text">{props.text}</p>
       </div>

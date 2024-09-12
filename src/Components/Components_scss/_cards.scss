@@ -11,6 +11,7 @@
     gap: 20px;
     .card_image {
       display: flex;
+      object-fit: cover;
       width: 340px;
       height: 340px;
       border-radius: 10px;
@@ -34,13 +35,15 @@
     background-color: transparent;
     margin-left: 10px;
     .card_image_container {
-      gap: 0px;
+      flex-direction: column;
+      gap: 10px;
       .card_image {
         width: calc(100% - 20px);
         height: 255px;
+        margin-top: 10px;
       }
       .card_title {
-        bottom: 32%;
+        bottom: 38%;
       }
     }
   }
