@@ -1,7 +1,6 @@
-import { useState } from "react";
 import "../Main_scss/main.css";
 
-function AboutContent(props) {
+function Collapse(props) {
   return (
     <>
       <div className="about_container">
@@ -15,4 +14,4 @@ function AboutContent(props) {
   );
 }
 
-export default AboutContent;
+export default Collapse;

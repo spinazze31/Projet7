@@ -155,6 +155,7 @@ a {
     width: 100%;
     background-color: transparent;
     margin-left: 10px;
+    padding-bottom: 0px;
   }
   .cards_container .card_image_container {
     flex-direction: column;
