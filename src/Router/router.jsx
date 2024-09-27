@@ -10,7 +10,7 @@ function Url() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<Announcement />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/A propos" element={<About />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

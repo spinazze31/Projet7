@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function MapLogement() {
   const cards = Logements.map((logement) => (
-    <div key={logement.id}>
+    <div className="text_position" key={logement.id}>
       <Link to={logement.id}>
         <img className="card_image" src={logement.cover} id={logement.id}></img>
         <h2 className="card_title"> {logement.title} </h2>

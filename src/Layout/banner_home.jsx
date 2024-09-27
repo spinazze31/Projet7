@@ -10,8 +10,8 @@ function Banner() {
           className="banner_img"
           alt="Image de bord de mer"
         ></img>
+        <p className="banner_txt">Chez vous, partout et ailleurs</p>
       </div>
-      <p className="banner_txt">Chez vous, partout et ailleurs</p>
     </>
   );
 }

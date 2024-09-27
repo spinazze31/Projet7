@@ -1,4 +1,4 @@
-import Collapse from "../Components/about_content";
+import Collapse from "../Components/collapse";
 import BannerAbout from "../Layout/banner_about";
 
 function About() {

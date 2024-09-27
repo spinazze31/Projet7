@@ -1,29 +1,37 @@
 import { useParams } from "react-router-dom";
 import LogementArray from "../Logements/logements.json";
-import Collapse from "./about_content";
+import Collapse from "./collapse";
+import Carousel from "./carousel";
+import Tags from "./tags";
+import Stars from "./stars";
 
 function FindLogement() {
   const { id } = useParams();
   const announcement = LogementArray.find((logement) => logement.id === id);
-  console.log(announcement.cover);
 
   return (
     <>
-      <div className="carousel_container">
-        <img src={announcement.cover}></img>;
-      </div>
-      <div className="">
-        <div className="">
+      <Carousel pictures={announcement.pictures} />
+
+      <div className="announcement_container">
+        <div className="description_container">
           <h2 className="announcement_title">{announcement.title}</h2>
-          <p className="">{announcement.location} </p>
+          <p className="announcement_location">{announcement.location} </p>
+
+          <Tags text={announcement.tags} />
         </div>
-        <div className="">{announcement.host.name} </div>
+        <div className="stars_name-container">
+          <h3 className="announcement_name">
+            {announcement.host.name}
+            <i className="fa-solid circle">&#xf111;</i>
+          </h3>
+          <Stars rating={announcement.rating} />
+        </div>
       </div>
-      <div className="">
-        {announcement.tags[0]} {announcement.tags[1]} {announcement.tags[2]}
+      <div className="announcement_equipements">
+        <Collapse title="Description" text={announcement.description} />
+        <Collapse title="Equipements" text={announcement.equipments} />
       </div>
-      <Collapse title="Description" text={announcement.description} />
-      <Collapse title="Equipements" text={announcement.equipments} />
     </>
   );
 }
