@@ -1,15 +1,18 @@
 import { useParams } from "react-router-dom";
-import LogementArray from "../Logements/logements.json";
+import logementArray from "../Logements/logements.json";
 import Collapse from "./collapse";
 import Carousel from "./carousel";
 import Tags from "./tags";
 import Stars from "./stars";
+import ErrorPage from "../Pages/errorpage";
 
 function FindLogement() {
   const { id } = useParams();
-  const announcement = LogementArray.find((logement) => logement.id === id);
+  const announcement = logementArray.find((logement) => logement.id === id);
 
-  return (
+  return !announcement ? (
+    <ErrorPage />
+  ) : (
     <>
       <Carousel pictures={announcement.pictures} />
 
@@ -21,10 +24,13 @@ function FindLogement() {
           <Tags text={announcement.tags} />
         </div>
         <div className="stars_name-container">
-          <h3 className="announcement_name">
-            {announcement.host.name}
-            <i className="fa-solid circle">&#xf111;</i>
-          </h3>
+          <div className="profile">
+            <h3 className="announcement_name">{announcement.host.name}</h3>
+            <img
+              src={announcement.host.picture}
+              className="announcement_profile"
+            ></img>
+          </div>
           <Stars rating={announcement.rating} />
         </div>
       </div>

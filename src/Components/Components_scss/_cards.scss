@@ -35,7 +35,7 @@
 
 @media (max-width: 767.98px) {
   .cards_container {
-    width: 100%;
+    width: calc(100% - 2px);
     background-color: transparent;
     margin-left: 10px;
     .card_image_container {
@@ -50,7 +50,7 @@
         }
         .card_title {
           position: absolute;
-          bottom: 30%;
+          bottom: 25%;
           width: calc(100% - 150px);
         }
       }

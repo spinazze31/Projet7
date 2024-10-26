@@ -1,4 +1,4 @@
-import FindLogement from "../Components/logement_announcement";
+import FindLogement from "../Components/findLogement";
 
 function Announcement() {
   return (

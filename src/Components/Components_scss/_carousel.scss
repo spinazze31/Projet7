@@ -31,6 +31,15 @@
     color: white;
     cursor: pointer;
   }
+  .carousel_pagination {
+    position: absolute;
+    top: 85%;
+    left: 48%;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
 }
 
 @media (max-width: 768px) {
@@ -38,5 +47,8 @@
     width: calc(100% - 20px);
     height: 255px;
     margin-left: 10px;
+    .carousel_pagination {
+      top: 75%;
+    }
   }
 }

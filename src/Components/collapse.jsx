@@ -1,64 +1,39 @@
 import { useState } from "react";
 import "../Main_scss/main.css";
 
-function Collapse(props) {
-  const [isOpen, openContainer] = useState(true);
-  const equipementAnnoucement = props.text;
-  if (typeof "equipementAnnouncement" != "string") {
-    const equipements = equipementAnnoucement.map((equipement) => (
-      <li key={equipement}>{equipement}</li>
-    ));
-    return isOpen ? (
-      <>
-        <div className="about_container">
-          <div className="about_container-title">
-            <h2 className="about_title">{props.title}</h2>
-            <i
-              className="fa-solid chevron_down"
-              onClick={() => openContainer(false)}
-            >
-              &#xf078;
-            </i>
-          </div>
-          <ul className="about_text">{equipements}</ul>
-        </div>
-      </>
+function Collapse({ text, title }) {
+  const [isOpen, setIsOpen] = useState(true);
+  const equipementAnnouncement = text;
+
+  const equipements =
+    typeof equipementAnnouncement === "object" ? (
+      <ul className="about_text">
+        {equipementAnnouncement.map((equipement) => (
+          <li key={equipement}>{equipement}</li>
+        ))}
+      </ul>
     ) : (
-      <div className="about_container">
-        <div className="about_container-title">
-          <h2 className="about_title">{props.title}</h2>
+      <p className="about_text">{text}</p>
+    );
+
+  return (
+    <div className="about_container">
+      <div className="about_container-title">
+        <h2 className="about_title">{title}</h2>
+        {isOpen ? (
           <i
-            className="fa-solid chevron_up"
-            onClick={() => openContainer(true)}
+            className={"fa-solid chevron_down"}
+            onClick={() => setIsOpen(false)}
           >
+            &#xf078;
+          </i>
+        ) : (
+          <i className="fa-solid chevron_up" onClick={() => setIsOpen(true)}>
             &#xf077;
           </i>
-        </div>
+        )}
       </div>
-    );
-  }
-
-  return isOpen ? (
-    <div className="about_container">
-      <div className="about_container-title">
-        <h2 className="about_title">{props.title}</h2>
-        <i
-          className="fa-solid chevron_down"
-          onClick={() => openContainer(false)}
-        >
-          &#xf078;
-        </i>
-      </div>
-      <p className="about_text">{props.text}</p>
-    </div>
-  ) : (
-    <div className="about_container">
-      <div className="about_container-title">
-        <h2 className="about_title">{props.title}</h2>
-        <i className="fa-solid chevron_up" onClick={() => openContainer(true)}>
-          &#xf077;
-        </i>
-      </div>
+      {isOpen && equipements}
     </div>
   );
 }

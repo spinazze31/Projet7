@@ -45,20 +45,22 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    .announcement_name {
+    .profile {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
       width: 167px;
-      height: 52px;
-      font-size: 18px;
-      font-weight: 500;
-      margin-top: 29.88px;
-      text-align: right;
-      color: #ff6060;
-      .circle {
+      margin-top: 30px;
+      .announcement_name {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 29.88px;
+        color: #ff6060;
+      }
+      .announcement_profile {
+        border-radius: 50%;
         width: 64px;
-        font-size: 50px;
-        color: #c4c4c4;
-        margin-left: 10px;
+        height: 64px;
       }
     }
     .stars_container {
@@ -97,7 +99,29 @@
       }
     }
     .about_text {
-      width: calc(100% - 20px);
+      width: calc(100% - 30px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+      font-size: 18px;
+      list-style-type: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .announcement_container {
+    .description_container {
+      .announcement_title {
+        font-size: 28px;
+      }
+    }
+    .tags_container {
+      .tag {
+        width: 90px;
+        font-size: 12px;
+      }
     }
   }
 }
@@ -126,20 +150,35 @@
     }
     .stars_name-container {
       flex-direction: row;
-      .announcement_name {
+      margin-top: 30px;
+      .profile {
         width: 100px;
-        height: 33px;
-        font-size: 12px;
-        text-align: right;
-        .circle {
+        margin-top: 0px;
+        .announcement_name {
+          font-size: 12px;
+          margin-top: 0px;
+          text-align: center;
+          margin-bottom: 0px;
+        }
+
+        .announcement_profile {
           width: 32px;
-          font-size: 32px;
+          height: 32px;
         }
       }
       .stars_container {
         justify-content: flex-start;
         align-items: center;
         order: -1;
+        padding-bottom: 5px;
+        .star {
+          font-size: 18px;
+          color: #e3e3e3;
+        }
+        .red_stars {
+          font-size: 18px;
+          color: #ff6060;
+        }
       }
     }
   }

@@ -20,6 +20,9 @@
   .header_line {
     border-bottom: solid black 1px;
   }
+  .hidden_line {
+    display: none;
+  }
 }
 
 @media (max-width: 767.98px) {

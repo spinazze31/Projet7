@@ -1,20 +1,25 @@
 import { Link } from "react-router-dom";
 import "../Main_scss/main.css";
 import Logo from "../Images/logo.png";
-import Line from "../Components/line";
+import { useLocation } from "react-router-dom";
 
 function Header() {
+  const location = useLocation();
+
   return (
     <nav className="header_container">
       <img src={Logo} className="logo" alt="Kasa logo" />
 
       <div className="header_link">
-        <Link className="" to="/">
+        <Link to="/" className={location.pathname === "/" ? "header_line" : ""}>
           Accueil
-          <Line />
         </Link>
-
-        <Link to="/A propos">A propos</Link>
+        <Link
+          to="/Apropos"
+          className={location.pathname === "/Apropos" ? "header_line" : ""}
+        >
+          A propos
+        </Link>
       </div>
     </nav>
   );
