@@ -1,11 +1,11 @@
 import Banner from "../Layout/banner_home";
-import Cards from "../Components/cards";
+import MapLogement from "../Components/map_logement";
 
 function Home() {
   return (
     <>
       <Banner />
-      <Cards />
+      <MapLogement />
     </>
   );
 }

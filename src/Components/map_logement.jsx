@@ -1,4 +1,4 @@
-import "../Router/router";
+import "../Router/url";
 import Logements from "../Logements/logements.json";
 import "../Main_scss/main.css";
 import { Link } from "react-router-dom";
