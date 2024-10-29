@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ErrorPage() {
   return (
     <>
@@ -6,9 +8,9 @@ function ErrorPage() {
         <p className="error_txt">
           Oups ! La page que vous demandez n'existe pas.
         </p>
-        <a className="error_link" href="http://localhost:5173/">
+        <Link to="/" className="error_link">
           Retourner sur la page d'accueil
-        </a>
+        </Link>
       </div>
     </>
   );
