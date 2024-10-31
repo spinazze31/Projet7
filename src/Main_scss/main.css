@@ -27,11 +27,6 @@ a {
     padding: 0;
   }
 }
-:root {
-  --main_color: #ff6060;
-  --second_color: #f6f6f6;
-}
-
 .banner_container {
   display: flex;
   margin: 50px 0px 0px 100px;
@@ -226,7 +221,6 @@ a {
   justify-content: center;
   align-items: center;
   width: calc(100% - 100px);
-  max-width: 1440px;
   height: 209px;
   background: #000000;
   margin-left: 50px;

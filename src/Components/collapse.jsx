@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../Main_scss/main.css";
 
 function Collapse({ text, title }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const equipementAnnouncement = text;
 
   const equipements =
